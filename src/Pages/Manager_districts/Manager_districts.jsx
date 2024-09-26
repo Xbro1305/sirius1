@@ -1,13 +1,13 @@
-import React, { act, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Manager_districts.module.scss";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
 export const Districts = () => {
   const [data, setData] = useState({});
-  const user = Telegram?.WebApp?.initDataUnsafe?.user;
+  const user = window?.Telegram?.WebApp?.initDataUnsafe?.user;
   const userId = user?.id || 389929933;
-  const hash = Telegram.WebApp?.initData || "qwerty";
+  const hash = window?.Telegram.WebApp?.initData || "qwerty";
   const { manager_id } = useParams();
   const url = process.env.REACT_APP_BASE_URL;
   const [activeSwitchers, setActiveSwitchers] = useState([58, 68]);

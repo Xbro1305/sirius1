@@ -3,15 +3,16 @@ import { Header } from "./Components/Header/Header";
 import { Provider } from "react-redux";
 import { store } from "./Context/store";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { Menu } from "./Components/Menu/Menu";
+import { Menu } from "./Components/Menu/Menu";
 import { Districts } from "./Pages/Manager_districts/Manager_districts";
+// import { Profile } from "./Pages/Profile/Profile";
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
         <Header />
-        {/* <Menu /> */}
+        <Menu />
         <Routes>
           <Route path="/" element={<h1>Home </h1>} />
           <Route
