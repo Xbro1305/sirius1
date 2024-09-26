@@ -1,0 +1,47 @@
+.managerDistricts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &_name {
+    padding: 20px 15px;
+    padding-top: 30px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+      padding: 10px;
+      background: #ccc4c44d;
+      font-weight: 400;
+    }
+
+    &_item {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+
+      &_switch {
+        width: 32px;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding: 0 2px;
+
+        &er {
+          height: 12px;
+          width: 12px;
+          border-radius: 6px;
+          background: #fff;
+        }
+      }
+    }
+  }
+}
