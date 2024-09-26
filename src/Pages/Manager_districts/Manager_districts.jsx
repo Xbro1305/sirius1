@@ -67,10 +67,10 @@ export const Districts = () => {
                 style={
                   activeSwitchers.includes(i.id)
                     ? {
-                        left: "2px",
+                        left: "18px",
                       }
                     : {
-                        left: "18px",
+                        left: "2px",
                       }
                 }
               ></div>
