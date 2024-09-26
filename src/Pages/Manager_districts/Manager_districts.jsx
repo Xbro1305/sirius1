@@ -55,16 +55,25 @@ export const Districts = () => {
               style={
                 activeSwitchers.includes(i.id)
                   ? {
-                      justifyContent: "flex-end",
                       background: "#082793",
                     }
                   : {
-                      justifyContent: "flex-start",
                       background: "#697077",
                     }
               }
             >
-              <div className={styles.managerDistricts_list_item_switcher}></div>
+              <div
+                className={styles.managerDistricts_list_item_switcher}
+                style={
+                  activeSwitchers.includes(i.id)
+                    ? {
+                        left: "2px",
+                      }
+                    : {
+                        left: "18px",
+                      }
+                }
+              ></div>
             </div>
           </div>
         ))}
