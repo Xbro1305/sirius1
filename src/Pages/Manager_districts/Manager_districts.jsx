@@ -61,6 +61,7 @@ export const Districts = () => {
           .catch((err) => console.log(err))
       )
       .catch((err) => console.log(err));
+      
 
     // s ? setActiveSwitchers(d) : setActiveSwitchers(added);
   };
