@@ -63,7 +63,7 @@ export const Districts = () => {
         <p className={styles.managerDistricts_list_title}>Регионы</p>
         {data?.all_districts?.map((i) => (
           <div
-            onClick={() => disable(i.id)}
+            onClick={() => disable(i.code)}
             className={styles.managerDistricts_list_item}
             key={i?.id}
           >
@@ -71,7 +71,7 @@ export const Districts = () => {
             <div
               className={styles.managerDistricts_list_item_switch}
               style={
-                data.manager_districts.includes(i.id)
+                data.manager_districts.includes(i.code)
                   ? {
                       background: "#082793",
                     }
@@ -83,7 +83,7 @@ export const Districts = () => {
               <div
                 className={styles.managerDistricts_list_item_switcher}
                 style={
-                  data.manager_districts.includes(i.id)
+                  data.manager_districts.includes(i.code)
                     ? {
                         left: "18px",
                       }
