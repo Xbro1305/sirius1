@@ -26,9 +26,11 @@ export const Districts = () => {
   const disable = (id) => {
     let sid = JSON.stringify(
       data.manager_districts.includes(id)
-        ? data.filter((i) => i != id)
+        ? data.manager_districts.filter((i) => i != id)
         : data.manager_districts.concat(id)
     );
+
+    console.log(sid);
 
     fetch(url + "backend/manager_districts?manager_id=" + manager_id, {
       method: "POST",
