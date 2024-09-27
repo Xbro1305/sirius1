@@ -1,0 +1,16 @@
+services:
+  frontend:
+    image: estate_presentation_frontend
+    build:
+      context: .
+    ports:
+      - "3005:3000"
+    container_name: estate_presentation_frontend
+    restart: unless-stopped
+    command: sh -c "npm run build && npm install -g serve && serve -s build"
+
+    logging:
+      options:
+        max-file: "5"
+        max-size: "3m"
+
