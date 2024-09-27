@@ -10,7 +10,6 @@ export const Districts = () => {
   const hash = window?.Telegram.WebApp?.initData || "qwerty";
   const { manager_id } = useParams();
   const url = process.env.REACT_APP_BASE_URL;
-  const [activeSwitchers, setActiveSwitchers] = useState([58, 68]);
 
   useEffect(() => {
     axios(url + "backend/manager_districts?manager_id=" + manager_id, {
@@ -24,19 +23,9 @@ export const Districts = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  //   const MDlist = data?.all_districts?.filter((i) =>
-  //     data?.manager_districts.includes(i.id)
-  //   );
-
   console.log(data);
 
   const disable = (id) => {
-    const arr = data.manager_districts;
-    // const d = arr.filter((i) => i != id);
-    const s = arr.includes(id);
-
-    const added = arr.concat(id);
-
     const sid = JSON.stringify([id]);
 
     fetch(url + "backend/manager_districts?manager_id=" + manager_id, {
@@ -61,9 +50,6 @@ export const Districts = () => {
           .catch((err) => console.log(err))
       )
       .catch((err) => console.log(err));
-      
-
-    // s ? setActiveSwitchers(d) : setActiveSwitchers(added);
   };
 
   return (
