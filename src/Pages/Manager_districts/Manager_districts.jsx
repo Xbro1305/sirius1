@@ -23,10 +23,14 @@ export const Districts = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(data);
-
   const disable = (id) => {
-    const sid = JSON.stringify([id]);
+    const active = [];
+
+    let sid = JSON.stringify(active);
+
+    const arr = data.manager_districts;
+
+    arr.includes(id) ? active.push(id) : (sid = active.filter((i) => i != id));
 
     fetch(url + "backend/manager_districts?manager_id=" + manager_id, {
       method: "POST",
